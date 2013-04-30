@@ -13,5 +13,9 @@
 
 Route::get('/', function()
 {
+	 echo '<br>';
+	echo Carbon::now();
 	return View::make('hello');
 });
+
+Route::resource('password', 'PasswordManagerController');

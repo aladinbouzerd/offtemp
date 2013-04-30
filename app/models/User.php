@@ -13,6 +13,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $table = 'users';
 
 	/**
+	 * Fields fillable
+	 *
+	 * @var string
+	 */
+	protected $fillable = ['email', 'password', 'name', 'last_name', 'role', 'active', 'activation_key'];
+
+	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
@@ -47,6 +54,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function getReminderEmail()
 	{
 		return $this->email;
+	}
+
+	/**
+	 * Get the user passwords
+	 *
+	 * @return object
+	 */
+	public function passwords()
+	{
+		return $this->hasMany('Password');
 	}
 
 }

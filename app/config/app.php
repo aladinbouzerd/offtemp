@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'Kr5mtz5yHc7E78M5Ri6WyVx9jE7RpUAu',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -177,6 +177,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Carbon'		  => 'Carbon\Carbon',
+		'Generator'		  => 'Stalxed\PasswordGenerator\Alnum'
 
 	),
 
